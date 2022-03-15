@@ -1,10 +1,9 @@
 <?php
 
-namespace Msgframework\Lib\AssetManager\Event;
+namespace Msgframework\Lib\AssetManager;
 
 use League\Uri\Uri;
 use League\Uri\UriInfo;
-use Msgframework\Lib\AssetManager\WebAssetItemInterface;
 
 /**
  * Web Asset Item class

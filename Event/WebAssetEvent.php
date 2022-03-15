@@ -1,9 +1,10 @@
 <?php
 
-namespace Msgframework\Lib\Event;
+namespace Msgframework\Lib\AssetManager\Event;
 
 use Msgframework\Lib\AssetManager\WebAssetItemInterface;
 use Msgframework\Lib\AssetManager\WebAssetRegistryInterface;
+use Msgframework\Lib\Event\AbstractEvent;
 
 class WebAssetEvent extends AbstractEvent
 {

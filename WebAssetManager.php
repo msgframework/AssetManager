@@ -2,7 +2,7 @@
 
 namespace Msgframework\Lib\AssetManager;
 
-use Msgframework\Lib\Event\WebAssetEvent;
+use Msgframework\Lib\AssetManager\Event\WebAssetEvent;
 use Msgframework\Lib\AssetManager\Exception\InvalidActionException;
 use Msgframework\Lib\AssetManager\Exception\UnknownAssetException;
 use Msgframework\Lib\AssetManager\Exception\UnsatisfiedDependencyException;
