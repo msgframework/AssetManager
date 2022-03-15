@@ -10,9 +10,16 @@
 
 
 
-## 
+## Load AssetManagerRegistry
 
 ``` php
+use RocketCMS\Lib\AssetManager\WebAssetRegistry as WebAssetRegistry;
+$registry = new WebAssetRegistry;
+
+// Add registry files
+$registry
+    ->addRegistryFile('media/vendor/media.asset.json')
+    ->addRegistryFile('media/system/media.asset.json');
 ```
 
 ## Installation

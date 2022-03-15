@@ -2,7 +2,7 @@
 
 namespace Msgframework\Lib\AssetManager;
 
-use Msgframework\Lib\Event\WebAssetEvent;
+use Msgframework\Lib\AssetManager\Event\WebAssetEvent;
 use Symfony\Component\EventDispatcher\EventDispatcher;
 use Symfony\Component\EventDispatcher\EventDispatcherInterface;
 use Msgframework\Lib\AssetManager\Exception\UnknownAssetException;
@@ -215,7 +215,7 @@ class WebAssetRegistry implements WebAssetRegistryInterface
      */
     public function addRegistryFile(string $path): self
     {
-        $path = str_replace('\\', '/', $path);
+        $path = str_replace('\\', DIRECTORY_SEPARATOR, $path);
 
         if (isset($this->dataFilesNew[$path]) || isset($this->dataFilesParsed[$path])) {
             return $this;
