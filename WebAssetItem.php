@@ -90,7 +90,7 @@ class WebAssetItem implements WebAssetItemInterface
             $this->dependencies = $dependencies;
         }
 
-        $this->options = $options;
+        $this->setOptions($options);
     }
 
     /**
@@ -197,6 +197,22 @@ class WebAssetItem implements WebAssetItemInterface
         }
 
         $this->options[$key] = $value;
+
+        return $this;
+    }
+
+    /**
+     * Set options
+     *
+     * @param array $options An options array
+     *
+     * @return self
+     */
+    public function setOptions(array $options): self
+    {
+        foreach ($options as $key => $value) {
+            $this->setOption($key, $value);
+        }
 
         return $this;
     }
