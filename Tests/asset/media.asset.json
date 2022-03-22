@@ -1,0 +1,59 @@
+{
+  "$schema": "https://dev.rocket-cms.ru/schemas/json-schema/web.asset.json",
+  "name": "Test",
+  "version": "1.0.0",
+  "description": "Тестовый набор ассетов",
+  "license": "GPL-2.0-or-later",
+  "assets": [
+    {
+      "name": "test.styles1",
+      "description": "The css file.",
+      "type": "style",
+      "uri": "css/test1.min.css"
+    },
+    {
+      "name": "test.styles2",
+      "description": "The css file.",
+      "type": "style",
+      "uri": "css/test2.min.css"
+    },
+    {
+      "name": "test.depend",
+      "description": "The css file.",
+      "type": "style",
+      "uri": "css/depend.min.css",
+      "position": "before",
+      "dependencies": [
+        "test.styles1"
+      ]
+    },
+    {
+      "name": "test.javascripts1",
+      "description": "The js file.",
+      "type": "script",
+      "uri": "js/test1.min.js"
+    },
+    {
+      "name": "test.javascripts2",
+      "description": "The js file.",
+      "type": "script",
+      "uri": "js/test2.min.js"
+    },
+    {
+      "name": "test.preset1",
+      "type": "preset",
+      "dependencies": [
+        "test.styles1#style",
+        "test.javascripts1#script"
+      ]
+    },
+    {
+      "name": "test.preset2",
+      "type": "preset",
+      "dependencies": [
+        "test.styles2#style",
+        "test.javascripts2#script"
+      ]
+    }
+  ]
+}
