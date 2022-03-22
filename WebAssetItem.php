@@ -76,11 +76,6 @@ class WebAssetItem implements WebAssetItemInterface
         $this->name = $name;
         $this->uri = $uri;
 
-        if (array_key_exists('version', $options)) {
-            $this->version = $options['version'];
-            unset($options['version']);
-        }
-
         if (array_key_exists('attributes', $options)) {
             $this->attributes = (array)$options['attributes'];
             unset($options['attributes']);
@@ -109,13 +104,26 @@ class WebAssetItem implements WebAssetItemInterface
     }
 
     /**
+     * Set Asset version
+     *
+     * @param mixed $version
+     *
+     * @return self
+     */
+    public function setVersion($version): self
+    {
+        $this->version = (string)$version;
+        return $this;
+    }
+
+    /**
      * Return Asset version
      *
      * @return  string
      */
     public function getVersion(): string
     {
-        return (string)$this->version;
+        return $this->version;
     }
 
     /**
@@ -182,6 +190,12 @@ class WebAssetItem implements WebAssetItemInterface
      */
     public function setOption(string $key, $value = null): self
     {
+        if ($key == 'version') {
+            $this->setVersion($value);
+
+            return $this;
+        }
+
         $this->options[$key] = $value;
 
         return $this;
