@@ -151,6 +151,9 @@ class WebAssetRegistry implements WebAssetRegistryInterface
      */
     public function remove(string $type, string $name): WebAssetRegistryInterface
     {
+        // Check if any new file was added
+        $this->parseRegistryFiles();
+
         if (!empty($this->assets[$type][$name])) {
             $asset = $this->assets[$type][$name];
 
@@ -172,6 +175,9 @@ class WebAssetRegistry implements WebAssetRegistryInterface
      */
     public function exists(string $type, string $name): bool
     {
+        // Check if any new file was added
+        $this->parseRegistryFiles();
+
         return !empty($this->assets[$type][$name]);
     }
 
