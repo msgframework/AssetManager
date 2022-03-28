@@ -5,7 +5,8 @@
     "php": ">=7.4",
     "symfony/event-dispatcher": "^5|^6",
     "msgframework/event": "^v1.0",
-    "league/uri": "^6.5"
+    "league/uri": "^6.5",
+    "msgframework/language": "^1.0"
   },
   "require-dev": {
     "ext-json": "*",
@@ -15,7 +16,7 @@
   "autoload": {
     "psr-4": {
       "Msgframework\\Lib\\AssetManager\\": "",
-      "MSGFramework\\Lib\\AssetManager\\Exception\\": "/Exception",
+      "Msgframework\\Lib\\AssetManager\\Exception\\": "/Exception",
       "Msgframework\\Lib\\AssetManager\\Event\\": "/Event",
       "Msgframework\\Lib\\AssetManager\\AssetItem\\": "/AssetItem"
     }

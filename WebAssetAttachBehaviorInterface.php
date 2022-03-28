@@ -2,7 +2,7 @@
 
 namespace Msgframework\Lib\AssetManager;
 
-use RocketCMS\Lib\Document\Document;
+use Msgframework\Lib\Document\Document;
 
 /**
  * Web Asset Behavior interface

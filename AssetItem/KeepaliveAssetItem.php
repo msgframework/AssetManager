@@ -3,9 +3,8 @@
 namespace Msgframework\Lib\AssetManager\AssetItem;
 
 
-use RocketCMS\Lib\Document\Document;
-use Joomla\CMS\Factory;
-use RocketCMS\Lib\Router\Route;
+use Msgframework\Lib\Document\Document;
+use Msgframework\Lib\Router\Route;
 use Msgframework\Lib\AssetManager\WebAssetAttachBehaviorInterface;
 use Msgframework\Lib\AssetManager\WebAssetItem;
 
