@@ -108,6 +108,25 @@ class WebAssetManager implements WebAssetManagerInterface
 		return $this->registry;
 	}
 
+    /**
+     * Clears all collected items.
+     *
+     * @return self
+     *
+     */
+    public function reset(): WebAssetManagerInterface
+    {
+        if ($this->locked)
+        {
+            throw new InvalidActionException('WebAssetManager is locked');
+        }
+
+        $this->activeAssets = [];
+        $this->dependenciesIsActual = false;
+
+        return $this;
+    }
+
 	/**
 	 * Adds support for magic method calls
 	 *
