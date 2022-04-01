@@ -316,7 +316,7 @@ class WebAssetRegistry implements WebAssetRegistryInterface
             $item['type'] = strtolower($item['type']);
 
             $name = $item['name'];
-            $uri = $item['uri'] ?? '';
+            $uri = isset($item['uri']) ? $assetSource['registryFileDir'] . $item['uri'] : '';
             $options = $item;
             $options['assetSource'] = $assetSource;
 
