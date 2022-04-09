@@ -15,7 +15,7 @@ class WebAssetRegistry implements WebAssetRegistryInterface
 
     /**
      * The server root directory
-     * @var string 
+     * @var string
      */
     private string $root_dir;
     /**
@@ -295,6 +295,7 @@ class WebAssetRegistry implements WebAssetRegistryInterface
         // Keep source info
         $assetSource = [
             'registryFile' => $path,
+            'registryFileDir' => pathinfo($path, PATHINFO_DIRNAME),
         ];
 
         $namespace = \array_key_exists('namespace', $data) ? $data['namespace'] : null;
